@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D3 Prep</title>
+    <script type="text/javascript" src="d3.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var animals = ['Cat', 'Dog', 'Mouse', 'Zebra', 'Lion']
+
+      var body = d3.select('body')
+      var list = body.append('ul')
+
+      list
+        .selectAll('li')
+        .data(animals)
+        .enter()
+        .append('li')
+        .text(function(d){ return d})
+    </script>
+  </body>
+</html>
